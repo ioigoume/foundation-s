@@ -1,0 +1,97 @@
+@charset 'utf-8';
+
+@import 'globals-default';
+@import 'globals-wayne-state';
+@import 'settings';
+
+// Sea Foam Settings
+
+$topbar-background: transparent;
+$topbar-input-width: 23rem;
+
+$header-font-family: "Playfair Display", serif;
+
+$thumbnail-shadow-hover: 0 0 6px 1px rgba($primary-color, 0.5);
+
+$button-color: $black;
+
+@import 'foundation-core';
+@import 'omeka';
+
+body {
+  font-weight: 500;
+}
+
+header {
+  border-bottom: 2px solid map-get($foundation-palette, border-line);
+}
+
+header a {
+  color: map-get($foundation-palette, menu-items);
+}
+
+.menu .active > a {
+  border-bottom: 0.2em solid map-get($foundation-palette, primary);
+  background: transparent;
+  margin-bottom: -0.1em;
+}
+
+header .button {
+  border: 1px solid #000;
+  margin-left: -1px;
+}
+
+header .input-group-field {
+  border: 1px solid #000;
+  box-shadow: none;
+  border-color: map-get($foundation-palette, border-line);
+}
+
+
+header .top-bar {
+  padding-bottom: 1px;
+}
+
+.top-bar {
+  form {
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .top-bar-right {
+    .search {
+      width: 100%;
+      margin-left: $global-margin;
+    }
+    flex: 0 1 auto;
+    margin-left: auto;
+    flex-direction: column-reverse;
+    align-items: end;
+  }
+  .input-group-field {
+    margin-right: 0;
+    border-radius: 40px;
+  }
+  .input-group-button {
+    visibility: hidden;
+  }
+}
+
+a,
+.breadcrumbs a {
+  color: $black;
+}
+
+body.vertical-menu header a {
+  color: #000;
+  text-decoration: underline;
+}
+
+label,
+.label {
+  color: $black;
+}
+
+.footer-container {
+  background: map-get($foundation-palette, discreet-gray);
+}
