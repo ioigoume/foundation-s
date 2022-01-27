@@ -18,16 +18,17 @@ $button-color: $black;
 @import 'foundation-core';
 @import 'omeka';
 
+
 body {
   font-weight: 500;
 }
 
 header {
-  border-bottom: 2px solid map-get($foundation-palette, border-line);
+  border-bottom: 2px solid map-get($foundation-palette, gray-001);
 }
 
 header a {
-  color: map-get($foundation-palette, menu-items);
+  color: map-get($wayne-palette, brown-001);
 }
 
 .menu .active > a {
@@ -44,7 +45,7 @@ header .button {
 header .input-group-field {
   border: 1px solid #000;
   box-shadow: none;
-  border-color: map-get($foundation-palette, border-line);
+  border-color: map-get($wayne-palette, gray-001);
 }
 
 
@@ -58,20 +59,24 @@ header .top-bar {
     display: flex;
     flex-direction: row-reverse;
   }
+
   .top-bar-right {
     .search {
       width: 100%;
       margin-left: $global-margin;
     }
+
     flex: 0 1 auto;
     margin-left: auto;
     flex-direction: column-reverse;
     align-items: end;
   }
+
   .input-group-field {
     margin-right: 0;
     border-radius: 40px;
   }
+
   .input-group-button {
     visibility: hidden;
   }
@@ -92,6 +97,86 @@ label,
   color: $black;
 }
 
-.footer-container {
-  background: map-get($foundation-palette, discreet-gray);
+footer {
+  .align-center {
+    text-align: center;
+  }
+
+  .acknowledgement-container {
+    background: map-get($foundation-palette, primary);
+
+    .grid-x {
+      min-height: 14rem;
+      padding: 4rem 0;
+      align-items: center;
+      justify-content: center;
+
+      .funding-acknowledgement {
+        color: map-get($wayne-palette, gray-001);
+        font-size: 1.3rem;
+        font-weight: 350;
+      }
+
+      .social-media {
+        color: map-get($wayne-palette, green-001);
+        font-size: 0.6em;
+        font-weight: bold;
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  .footer-container {
+    background: map-get($wayne-palette, gray-002);
+    color: map-get($wayne-palette, gray-001);
+
+    .cells {
+      padding: 1em 0;
+
+      a, div {
+        padding-bottom: 0.5em;
+      }
+
+    }
+
+    .logo {
+      width: fit-content;
+    }
+
+    .outline {
+      font-size: 0.6em;
+
+      .outline-title {
+        display: block;
+        text-transform: uppercase;
+        padding-bottom: 0.3em;
+      }
+
+      .outline-item {
+        display: block;
+        font-weight: bold;
+        padding-bottom: 0.2em;
+        color: map-get($wayne-palette, gray-001);
+      }
+    }
+
+    .copyright {
+      font-size: 0.4em;
+      margin-top: 1em;
+    }
+  }
+}
+
+
+
+@media (min-width: 300px) {
+  .footer-container .grid-x {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 640px) {
+  .footer-container .grid-x {
+    justify-content: unset;
+  }
 }

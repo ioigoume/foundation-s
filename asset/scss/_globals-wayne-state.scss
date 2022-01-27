@@ -2,15 +2,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 $foundation-palette: (
-        primary: #FFCC33,
+        primary: #ffcc00,
         secondary: #c5f4f2,
         success: #3adb76,
         warning: #ffae00,
         alert: #cc4b37,
-        tab-titles: #0C5449,
-        menu-items: #74613D,
-        border-line: #777A7B,
-        discreet-gray: #EDEFEE
 );
+
+$wayne-palette: (
+        brown-001: #74613D,
+        gray-001: #777A7B,
+        gray-002: #EDEFEE,
+        green-001: #0C5449
+);
+
 $global-font-size: 18px;
 $body-font-family: 'Lato', sans-serif;
