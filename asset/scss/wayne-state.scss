@@ -4,13 +4,8 @@
 @import 'globals-wayne-state';
 @import 'settings';
 
-// Sea Foam Settings
-
 $topbar-background: transparent;
 $topbar-input-width: 23rem;
-
-$header-font-family: "Playfair Display", serif;
-
 $thumbnail-shadow-hover: 0 0 6px 1px rgba($primary-color, 0.5);
 
 $button-color: $black;
@@ -25,6 +20,14 @@ body {
 
 header {
   border-bottom: 2px solid map-get($foundation-palette, gray-001);
+  padding-right: (2 * $global-padding) $global-padding;
+  padding-left: (2 * $global-padding) $global-padding;
+  @include xy-grid-container;
+
+  @include breakpoint(small down) {
+    padding: 0;
+    margin: $global-margin;
+  }
 }
 
 header a {
@@ -33,8 +36,9 @@ header a {
 
 .menu .active > a {
   border-bottom: 0.2em solid map-get($foundation-palette, primary);
+  color: map-get($wayne-palette, brown-001);
   background: transparent;
-  margin-bottom: -0.1em;
+  margin-bottom: -0.05em;
 }
 
 header .button {
@@ -43,9 +47,8 @@ header .button {
 }
 
 header .input-group-field {
-  border: 1px solid #000;
+  border: 1px solid #map-get($wayne-palette, gray-001);
   box-shadow: none;
-  border-color: map-get($wayne-palette, gray-001);
 }
 
 
@@ -169,7 +172,7 @@ footer {
     }
 
     .copyright {
-      font-size: 0.4em;
+      font-size: 0.6em;
       margin-top: 1em;
     }
   }
