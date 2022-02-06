@@ -1,8 +1,8 @@
 @charset 'utf-8';
 
 @import 'globals-default';
-@import 'globals-wayne-state';
 @import 'settings';
+@import 'globals-wayne-state';
 
 $topbar-background: transparent;
 $topbar-input-width: 23rem;
@@ -19,7 +19,7 @@ body {
 }
 
 header {
-  border-bottom: 2px solid map-get($foundation-palette, gray-001);
+  border-bottom: 2px solid map-get($foundation-palette, gray-003);
   padding-right: (2 * $global-padding) $global-padding;
   padding-left: (2 * $global-padding) $global-padding;
   @include xy-grid-container;
@@ -46,11 +46,28 @@ header .button {
   margin-left: -1px;
 }
 
-header .input-group-field {
-  border: 1px solid map-get($wayne-palette, gray-001);
-  box-shadow: none;
+textarea {
+  min-height: 5rem;
+  border-radius: 20px;
+  padding:0 20px;
 }
+[type] {
+  border-radius: 20px;
+}
+[type='text'] {
+  box-shadow: none;
+  text-indent:20px;
+}
+[type='submit'] {
+  display: flex;
+  margin: 1em auto;
+  background: map-get($foundation-palette, warning);
+  color: map-get($wayne-palette, gray-002);
+  &:hover {
+    background: map-get($wayne-palette, gray-004);
 
+  }
+}
 
 header .top-bar {
   padding-bottom: 1px;
@@ -72,11 +89,16 @@ h4, .h4 {
 .content-header {
   font-weight: 700;
 }
+.contact-info-container,
 .content-sub-header {
   font-weight: 900;
 }
 p {
-  color: map-get($wayne-palette, gray-001);
+  color: map-get($wayne-palette, gray-003);
+}
+
+i .fa {
+  margin-right: 0.5em;
 }
 
 .top-bar {
@@ -99,8 +121,8 @@ p {
   }
 
   .input-group-field {
+    border-radius: 20px;
     margin-right: 0;
-    border-radius: 40px;
   }
 
   .input-group-button {
@@ -109,13 +131,35 @@ p {
 }
 
 .page-title {
-  background-image: url('https://comanage-upstream.aai-dev.grnet.gr/omeka/files/asset/b9ee6fbc91058669731854ec0e91a447f6d8f9e1.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   min-height: 14rem;
   text-align: center;
   padding: 2em;
+
+  &.about {
+    background-image: url('https://comanage-upstream.aai-dev.grnet.gr/omeka/files/asset/b9ee6fbc91058669731854ec0e91a447f6d8f9e1.png');
+  }
+  &.contact {
+    background-image: url('https://comanage-upstream.aai-dev.grnet.gr/omeka/files/asset/b2119a9da95e091fda1f2812c3476fb7b1132260.png');
+  }
+}
+
+.contact-info-container {
+  color: map-get($wayne-palette, brown-001);
+  font-size: 0.8em;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+
+  .info-item {
+    padding: 0.5rem;
+  }
+  .fa {
+    color: map-get($foundation-palette, warning);
+    margin-right: 0.5em;
+  }
+
 }
 
 a,
@@ -160,7 +204,7 @@ footer {
       }
 
       .funding-acknowledgement-sub {
-        color: map-get($wayne-palette, gray-001);
+        color: map-get($wayne-palette, gray-003);
         font-weight: 500;
         text-transform: capitalize;
         margin-top: 1rem;
@@ -184,8 +228,8 @@ footer {
   }
 
   .footer-container {
-    background: map-get($wayne-palette, gray-002);
-    color: map-get($wayne-palette, gray-001);
+    background: map-get($wayne-palette, gray-004);
+    color: map-get($wayne-palette, gray-003);
 
     .cells {
       padding: 1em 0;
@@ -213,7 +257,7 @@ footer {
         display: block;
         font-weight: bold;
         padding-bottom: 0.2em;
-        color: map-get($wayne-palette, gray-001);
+        color: map-get($wayne-palette, gray-003);
       }
     }
 
@@ -241,6 +285,10 @@ footer {
   .outline-item {
     text-align: center;
   }
+
+  .contact-us-block {
+    margin: 1em;
+  }
 }
 
 @media (min-width: 640px) {
@@ -263,5 +311,9 @@ footer {
   .outline,
   .outline-item {
     text-align: unset;
+  }
+
+  .contact-us-block {
+    margin: 1em 3em;
   }
 }

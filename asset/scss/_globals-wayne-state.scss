@@ -12,7 +12,9 @@ $foundation-palette: (
 $wayne-palette: (
         brown-001: #74613D,
         gray-001: #777A7B,
-        gray-002: #EDEFEE,
+        gray-002: #333,
+        gray-003: #666,
+        gray-004: #EDEFEE,
         green-001: #0C5449
 );
 
@@ -21,3 +23,5 @@ $global-font-size: 18px;
 $body-font-family: 'Lato', sans-serif;
 // Header
 $header-font-family: 'Lato', sans-serif;
+// Table
+$table-border: none;
