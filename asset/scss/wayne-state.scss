@@ -13,7 +13,6 @@ $button-color: $black;
 @import 'foundation-core';
 @import 'omeka';
 
-
 body {
   font-weight: 500;
 }
@@ -49,23 +48,27 @@ header .button {
 textarea {
   min-height: 5rem;
   border-radius: 20px;
-  padding:0 20px;
+  padding: 0 20px;
 }
+
 [type] {
   border-radius: 20px;
 }
+
 [type='text'] {
   box-shadow: none;
-  text-indent:20px;
+  text-indent: 20px;
 }
+
 [type='submit'] {
   display: flex;
   margin: 1em auto;
   background: map-get($foundation-palette, warning);
   color: map-get($wayne-palette, gray-002);
+
+  &:focus,
   &:hover {
     background: map-get($wayne-palette, gray-004);
-
   }
 }
 
@@ -86,13 +89,16 @@ h4, .h4 {
 .content-header-small {
   font-weight: 300;
 }
+
 .content-header {
   font-weight: 700;
 }
+
 .contact-info-container,
 .content-sub-header {
   font-weight: 900;
 }
+
 p {
   color: map-get($wayne-palette, gray-003);
 }
@@ -141,8 +147,32 @@ i .fa {
   &.about {
     background-image: url('https://comanage-upstream.aai-dev.grnet.gr/omeka/files/asset/b9ee6fbc91058669731854ec0e91a447f6d8f9e1.png');
   }
+
   &.contact {
     background-image: url('https://comanage-upstream.aai-dev.grnet.gr/omeka/files/asset/b2119a9da95e091fda1f2812c3476fb7b1132260.png');
+  }
+
+  &.project-team {
+    background-image: url('https://comanage-upstream.aai-dev.grnet.gr/omeka/files/asset/2867cf16fdeeae30f51f02f4a029f3e1a1af6116.png');
+  }
+
+}
+
+.min-bio-container {
+  display: flex;
+  align-items: center;
+
+  img {
+    max-width: unset;
+    max-height: 20rem;
+  }
+
+  .min-bio {
+    padding-left: 2em;
+
+    h3 {
+      color: map-get($wayne-palette, brown-001);
+    }
   }
 }
 
@@ -155,6 +185,7 @@ i .fa {
   .info-item {
     padding: 0.5rem;
   }
+
   .fa {
     color: map-get($foundation-palette, warning);
     margin-right: 0.5em;
@@ -281,6 +312,11 @@ footer {
     }
   }
 
+  .min-bio-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   .outline,
   .outline-item {
     text-align: center;
@@ -315,5 +351,11 @@ footer {
 
   .contact-us-block {
     margin: 1em 3em;
+  }
+}
+
+@media (min-width: 875px) {
+  .min-bio-container {
+    flex-wrap: unset;
   }
 }
