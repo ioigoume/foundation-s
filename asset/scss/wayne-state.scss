@@ -17,6 +17,11 @@ body {
   font-weight: 500;
 }
 
+// Typography
+.capitalize {
+  text-transform: capitalize;
+}
+
 header {
   border-bottom: 2px solid map-get($foundation-palette, gray-003);
   padding-right: (2 * $global-padding) $global-padding;
@@ -184,6 +189,7 @@ i .fa {
 
   .info-item {
     padding: 0.5rem;
+    overflow-wrap: anywhere;
   }
 
   .fa {
@@ -191,6 +197,19 @@ i .fa {
     margin-right: 0.5em;
   }
 
+}
+
+.reach-out {
+  .contact-info-container .info-item {
+    display: flex;
+    align-items: first baseline;
+  }
+
+  .reach-out-label {
+    color: map-get($wayne-palette, gray-003);
+    font-weight: 500;
+    text-align: left;
+  }
 }
 
 a,
@@ -315,6 +334,10 @@ footer {
   .min-bio-container {
     flex-wrap: wrap;
     justify-content: center;
+
+    p {
+      margin-bottom: unset;
+    }
   }
 
   .outline,
