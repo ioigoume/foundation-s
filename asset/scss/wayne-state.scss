@@ -161,6 +161,9 @@ i .fa {
     background-image: url('https://comanage-upstream.aai-dev.grnet.gr/omeka/files/asset/2867cf16fdeeae30f51f02f4a029f3e1a1af6116.png');
   }
 
+  &.introduction {
+    background-image: url('https://comanage-upstream.aai-dev.grnet.gr/omeka/files/asset/5f4a7b72eadd6d6ea5ada140967e492be70c36a3.png');
+  }
 }
 
 .min-bio-container {
@@ -212,10 +215,19 @@ i .fa {
   }
 }
 
-a,
+
 .breadcrumbs a {
-  color: $black;
+  color: map-get($wayne-palette, brown-001);
 }
+
+a {
+  color: map-get($wayne-palette, brown-001);
+  &:hover {
+    font-weight: 900;
+    text-decoration: underline;
+  }
+}
+
 
 body.vertical-menu header a {
   color: #000;
@@ -351,6 +363,7 @@ footer {
 }
 
 @media (min-width: 640px) {
+  .introduction-content,
   .about-content {
     margin: 0 4rem;
   }
