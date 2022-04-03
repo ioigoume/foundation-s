@@ -104,6 +104,15 @@ h4, .h4 {
   font-weight: 900;
 }
 
+.wsu-link {
+  color: map-get($wayne-palette, green-001);
+  text-transform: capitalize;
+}
+
+.fonts-lc {
+  text-transform: lowercase;
+}
+
 p {
   color: map-get($wayne-palette, gray-003);
 }
@@ -166,7 +175,7 @@ i .fa {
   }
 }
 
-.min-bio-container {
+.side-by-side-container {
   display: flex;
   align-items: center;
 
@@ -175,7 +184,7 @@ i .fa {
     max-height: 20rem;
   }
 
-  .min-bio {
+  .text-content {
     padding-left: 2em;
 
     h3 {
@@ -343,7 +352,7 @@ footer {
     }
   }
 
-  .min-bio-container {
+  .side-by-side-container {
     flex-wrap: wrap;
     justify-content: center;
 
@@ -391,7 +400,7 @@ footer {
 }
 
 @media (min-width: 875px) {
-  .min-bio-container {
+  .side-by-side-container {
     flex-wrap: unset;
   }
 }
