@@ -224,6 +224,95 @@ i .fa {
   }
 }
 
+// Home VIEW
+.thumbnail-banner {
+  .thumbnail-item {
+    width: auto;
+    padding: 0.5em 1em;
+    background-color: map-get($wayne-palette, gray-004);
+    margin: 0.5em;
+    border-radius: 5%;
+
+    .wsu-badge {
+      margin-left: -1.35em;
+      margin-right: -.5em;
+      border-bottom-right-radius: 9px;
+      border-top-right-radius: 9px;
+      color: #fff;
+      height: 2em;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      padding-left: 1em;
+    }
+
+    a,
+    .wsu-badge {
+      font-weight: 900;
+      font-size: small;
+    }
+
+    .thumbnail-item-image {
+      min-height: 12em;
+      min-width: 9em;
+      background-size: cover;
+    }
+
+    &.history {
+      .wsu-badge {
+        background-color: map-get($wayne-palette, green-002);
+      }
+      .thumbnail-item-image {
+        background-image: url('https://comanage-upstream.aai-dev.grnet.gr/omeka/files/asset/4649f0090421cf0ec1f73fdc7ad529fa7d4b28e8.jpg');
+      }
+    }
+
+    &.economics {
+      .wsu-badge {
+        background-color: map-get($wayne-palette, yellow-001);
+      }
+      .thumbnail-item-image {
+        background-image: url('https://comanage-upstream.aai-dev.grnet.gr/omeka/files/asset/7c7dade0db0fc0016d6763914ece914a830f4ddd.jpg');
+      }
+    }
+
+    &.geography {
+      .wsu-badge {
+        background-color: map-get($wayne-palette, blue-001);
+      }
+      .thumbnail-item-image {
+        background-image: url('https://comanage-upstream.aai-dev.grnet.gr/omeka/files/asset/790768953c4214a6ee434360494743ba22dc848b.jpg');
+      }
+    }
+
+    &.political {
+      .wsu-badge {
+        background-color: map-get($wayne-palette, purple-001);
+      }
+      .thumbnail-item-image {
+        background-image: url('https://comanage-upstream.aai-dev.grnet.gr/omeka/files/asset/edcc06797e72fe30034d0394af96e8e14eefd6a1.jpg');
+      }
+    }
+
+    &.health {
+      .wsu-badge {
+        background-color: map-get($wayne-palette, orange-001);
+      }
+      .thumbnail-item-image {
+        background-image: url('https://comanage-upstream.aai-dev.grnet.gr/omeka/files/asset/e6481bf8dd5f12b5e722d3d5d233118c77d22e78.jpeg');
+      }
+    }
+
+    &.natural {
+      .wsu-badge {
+        background-color: map-get($wayne-palette, grey-005);
+      }
+      .thumbnail-item-image {
+        background-image: url('https://comanage-upstream.aai-dev.grnet.gr/omeka/files/asset/37d31f91da53bbad920629c19596b9be8ce19380.jpg');
+      }
+    }
+  }
+}
 
 .breadcrumbs a {
   color: map-get($wayne-palette, brown-001);
@@ -231,6 +320,7 @@ i .fa {
 
 a {
   color: map-get($wayne-palette, brown-001);
+
   &:hover {
     font-weight: 900;
     text-decoration: underline;
