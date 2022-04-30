@@ -61,10 +61,10 @@ textarea {
   border-radius: 20px;
 }
 
-[type='text'] {
-  box-shadow: none;
-  text-indent: 20px;
-}
+//[type='text'] {
+//  box-shadow: none;
+//  text-indent: 20px;
+//}
 
 [type='submit'] {
   display: flex;
@@ -103,6 +103,21 @@ h4, .h4 {
 .contact-info-container,
 .content-sub-header {
   font-weight: 900;
+}
+
+.lesson_plans {
+  #blocks {
+    padding-left: 5em;
+    padding-right: 5em;
+
+    & > h2:first-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .break {
+    margin-top: 0em;
+  }
 }
 
 .wsu-link {
@@ -203,6 +218,10 @@ i .fa {
   .info-item {
     padding: 0.5rem;
     overflow-wrap: anywhere;
+
+    a {
+      color: inherit;
+    }
   }
 
   .fa {
@@ -263,6 +282,7 @@ i .fa {
       .wsu-badge {
         background-color: map-get($wayne-palette, green-002);
       }
+
       .thumbnail-item-image {
         background-image: url('https://comanage-upstream.aai-dev.grnet.gr/omeka/files/asset/4649f0090421cf0ec1f73fdc7ad529fa7d4b28e8.jpg');
       }
@@ -272,6 +292,7 @@ i .fa {
       .wsu-badge {
         background-color: map-get($wayne-palette, yellow-001);
       }
+
       .thumbnail-item-image {
         background-image: url('https://comanage-upstream.aai-dev.grnet.gr/omeka/files/asset/7c7dade0db0fc0016d6763914ece914a830f4ddd.jpg');
       }
@@ -281,6 +302,7 @@ i .fa {
       .wsu-badge {
         background-color: map-get($wayne-palette, blue-001);
       }
+
       .thumbnail-item-image {
         background-image: url('https://comanage-upstream.aai-dev.grnet.gr/omeka/files/asset/790768953c4214a6ee434360494743ba22dc848b.jpg');
       }
@@ -290,6 +312,7 @@ i .fa {
       .wsu-badge {
         background-color: map-get($wayne-palette, purple-001);
       }
+
       .thumbnail-item-image {
         background-image: url('https://comanage-upstream.aai-dev.grnet.gr/omeka/files/asset/edcc06797e72fe30034d0394af96e8e14eefd6a1.jpg');
       }
@@ -299,6 +322,7 @@ i .fa {
       .wsu-badge {
         background-color: map-get($wayne-palette, orange-001);
       }
+
       .thumbnail-item-image {
         background-image: url('https://comanage-upstream.aai-dev.grnet.gr/omeka/files/asset/e6481bf8dd5f12b5e722d3d5d233118c77d22e78.jpeg');
       }
@@ -308,6 +332,7 @@ i .fa {
       .wsu-badge {
         background-color: map-get($wayne-palette, grey-005);
       }
+
       .thumbnail-item-image {
         background-image: url('https://comanage-upstream.aai-dev.grnet.gr/omeka/files/asset/37d31f91da53bbad920629c19596b9be8ce19380.jpg');
       }
@@ -315,6 +340,7 @@ i .fa {
   }
 }
 
+.lesson-plan-title-extra,
 .breadcrumbs a {
   color: map-get($wayne-palette, brown-001);
 }
